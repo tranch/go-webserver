@@ -1,0 +1,13 @@
+<html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+	<form method="post" action="create">
+		<input type="text" name="First_Name" /> <input type="text" name="Last_Name" /> <button>Create Member</button>
+	</form>
+	{{range $element := .members}} 
+    	<a href="update/{{ $element.Id }}">{{ $element.First_Name}} {{$element.Last_Name }}</a>&#160;<a href="/delete/{{ $element.Id }}">x</a><br/>
+	{{ end }}
+	</body>
+</html>
