@@ -86,7 +86,7 @@ func main() {
 
 	r.POST("/create", func(c *gin.Context) {
 		firstName := strings.TrimSpace(c.Request.FormValue("First_Name"))
-		lastName := strings.TrimSpace(c.Request.FormValue("First_Name"))
+		lastName := strings.TrimSpace(c.Request.FormValue("Last_Name"))
 		if firstName != "" && lastName != "" {
 			dbContext.CreateMember(firstName, lastName)
 		}
